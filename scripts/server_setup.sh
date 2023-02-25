@@ -17,6 +17,7 @@ echo ">>> Done!"
 
 echo ">>> Setuping tools..."
 cd TOOLS_PATH
+git clone https://github.com/Raisess/maestro && NO_SUDO=1 ./install.py
 git clone https://github.com/Raisess/pingr && NO_SUDO=1 ./install.py
 git clone https://github.com/Raisess/dbc && NO_SUDO=1 ./install.py
 cd /home/$USER
