@@ -8,7 +8,7 @@ This is a collection of scripts and tools to setup a Raspberry PI in a small ser
   - usage:
 
 ```shell
-# ./scripts/sdcard_setup.sh <device> <image>
+# ./scripts/sdcard_setup.sh <device> <image>.tar.gz
 
 ./scripts/sdcard_setup.sh sdx ~/Downloads/ArchLinuxARM-rpi-armv7-latest.tar.gz
 ```
@@ -16,11 +16,16 @@ This is a collection of scripts and tools to setup a Raspberry PI in a small ser
 You can download the Arch ARM for RPI directly [here](http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-armv7-latest.tar.gz).
 All available images list [here](https://archlinuxarm.org/about/downloads).
 
-- **server_setup**: Download and install server tools and prepare services to be added.
+- **server_setup**: Download and install server tools (also can be used to upgrade your current server tools version).
+  - usage:
+
+```shell
+./scripts/setup_server.sh
+```
 
 ## Tools
 
-These tools are added automatically by the `setup_server.sh` scriptHOW TO USE: :
+These tools are added automatically by the `setup_server.sh` script:
 
 - [maestro](https://github.com/Raisess/maestro): Manage background processes.
   - You can use to start your services in background and track logs without opening directly in your main TTY.

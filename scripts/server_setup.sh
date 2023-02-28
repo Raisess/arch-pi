@@ -4,13 +4,13 @@
 # as a home server.
 # @NOTE: To be executed in the raspberry pi (su mode).
 
-HOME_PATH=/home/$USER
-TOOLS_PATH=$HOME_PATH/tools
-SERVICES_PATH=$HOME_PATH/services
+DOWNLOAD_PATH=/tmp/arch-pi-server-setup
+TOOLS_PATH=$DOWNLOAD_PATH/tools
+SERVICES_PATH=$DOWNLOAD_PATH/services
 
 echo "ArchPI Server Setup | TOOLS_PATH: $TOOLS_PATH / SERVICES_PATH: $SERVICES_PATH"
 
-mkdir -p $TOOLS_PATH $SERVICES_PATH
+mkdir -p $DOWNLOAD_PATH $TOOLS_PATH $SERVICES_PATH
 
 echo ">>> Installing dependencies..."
 pacman -S git python3 podman
@@ -23,22 +23,6 @@ git clone https://github.com/Raisess/pingr && cd pingr && NO_SUDO=1 ./install.py
 git clone https://github.com/Raisess/dbc && cd dbc && NO_SUDO=1 ./install.py && cd ..
 echo ">>> Done!"
 
-echo ">>> Setuping services..."
-cd $SERVICES_PATH
-maestro create maestro-serve "maestro serve"
+rm -rf $DOWNLOAD_PATH
 
-echo "[
-  {
-    \"name\": \"Some service\",
-    \"protocol\": \"http\",
-    \"host\": \"localhost\",
-    \"port\": 8080,
-    \"routes\": [
-      \"/health/ping\",
-      \"/health/status\"
-    ]
-  }
-]" > services.json
-echo ">>> Done!"
-
-cd $HOME_PATH
+cd /home/$USER
