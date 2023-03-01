@@ -13,6 +13,7 @@ echo "ArchPI Server Setup | TOOLS_PATH: $TOOLS_PATH / SERVICES_PATH: $SERVICES_P
 mkdir -p $DOWNLOAD_PATH $TOOLS_PATH $SERVICES_PATH
 
 echo ">>> Installing dependencies..."
+pacman -Sy
 pacman -S git clangd python3 podman
 echo ">>> Done!"
 
