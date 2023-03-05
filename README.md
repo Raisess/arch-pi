@@ -27,7 +27,6 @@ All available images list [here](https://archlinuxarm.org/about/downloads).
 
 These tools are added automatically by the `setup_server.sh` script:
 
-- [disk-mounter](https://github/com/Raisess/disk-mounter): Used to manage disk devices faster.
 - [maestro](https://github.com/Raisess/maestro): Manage background processes.
   - You can use to start your services in background and track logs without opening directly in your main TTY.
 - [pingr](https://github.com/Raisess/pingr): HTTP/S Services status checker.
