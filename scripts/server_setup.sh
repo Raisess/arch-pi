@@ -6,11 +6,10 @@
 
 DOWNLOAD_PATH=/tmp/arch-pi-server-setup
 TOOLS_PATH=$DOWNLOAD_PATH/tools
-SERVICES_PATH=$DOWNLOAD_PATH/services
 
-echo "ArchPI Server Setup | TOOLS_PATH: $TOOLS_PATH / SERVICES_PATH: $SERVICES_PATH"
+echo "ArchPI Server Setup | TOOLS_PATH: $TOOLS_PATH"
 
-mkdir -p $DOWNLOAD_PATH $TOOLS_PATH $SERVICES_PATH
+mkdir -p $DOWNLOAD_PATH $TOOLS_PATH
 
 echo ">>> Installing dependencies..."
 pacman -Sy
@@ -21,8 +20,6 @@ echo ">>> Setuping tools..."
 cd $TOOLS_PATH
 # CLI's
 git clone https://github.com/Raisess/maestro && cd maestro && NO_SUDO=1 ./install.py && cd ..
-git clone https://github.com/Raisess/pingr && cd pingr && NO_SUDO=1 ./install.py && cd ..
-git clone https://github.com/Raisess/dbc && cd dbc && NO_SUDO=1 ./install.py && cd ..
 echo ">>> Done!"
 
 rm -rf $DOWNLOAD_PATH

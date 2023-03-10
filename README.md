@@ -29,8 +29,3 @@ These tools are added automatically by the `setup_server.sh` script:
 
 - [maestro](https://github.com/Raisess/maestro): Manage background processes.
   - You can use to start your services in background and track logs without opening directly in your main TTY.
-- [pingr](https://github.com/Raisess/pingr): HTTP/S Services status checker.
-  - You can use to ensure running HTTP/S services in your machine or in the web.
-- [dbc](https://github.com/Raisess/dbc): A database container manager.
-  - You can use to start pre-configured databases in your machine using images from docker library using different container managers
-   (Recommend you to use `podman` to not have to start a daemon).
