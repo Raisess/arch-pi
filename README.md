@@ -40,7 +40,7 @@ You can change that path in the scripts (`APPDATA_PATH`).
 
 - name: `filebrowser`
 - official website: https://filebrowser.org
-- maestro add command: `maestro create filebrowser "podman start filebrowser --attach"`
+- status: `tested`
 
 A cool file manager tool.
 
@@ -48,6 +48,14 @@ A cool file manager tool.
 
 - name: `jellyfin`
 - official website: https://jellyfin.org
-- maestro add command: `maestro create jellyfin "podman start jellyfin --attach"`
+- status: `tested`
 
 Local media streaming service.
+
+#### Deluge
+
+- name: `deluge`
+- official website: https://deluge-torrent.org
+- status: `untested`
+
+BitTorrent client.
