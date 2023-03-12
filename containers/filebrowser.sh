@@ -15,3 +15,5 @@ podman create --name filebrowser \
 	-e PGID=$(id -g) \
 	-p 1234:80 \
 	docker.io/filebrowser/filebrowser:latest
+
+maestro create filebrowser "podman start filebrowser --attach"

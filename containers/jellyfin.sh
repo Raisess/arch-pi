@@ -14,3 +14,5 @@ podman create --name jellyfin \
 	-p 8096:8096/tcp \
 	--mount type=bind,source=$DATA_PATH,destination=/media,ro=true,relabel=private \
 	docker.io/jellyfin/jellyfin:latest
+
+maestro create jellyfin "podman start jellyfin --attach"
