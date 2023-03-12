@@ -41,6 +41,7 @@ You can change that path in the scripts (`APPDATA_PATH`).
 - name: `filebrowser`
 - official website: https://filebrowser.org
 - status: `tested`
+- webui port: `1234`
 
 A cool file manager tool.
 
@@ -49,6 +50,7 @@ A cool file manager tool.
 - name: `jellyfin`
 - official website: https://jellyfin.org
 - status: `tested`
+- webui port: `8096`
 
 Local media streaming service.
 
@@ -57,5 +59,6 @@ Local media streaming service.
 - name: `deluge`
 - official website: https://deluge-torrent.org
 - status: `untested`
+- webui port: `8112`
 
 BitTorrent client.
