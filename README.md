@@ -29,3 +29,25 @@ These tools are added automatically by the `setup_server.sh` script:
 
 - [maestro](https://github.com/Raisess/maestro): Manage background processes.
   - You can use to start your services in background and track logs without opening directly in your main TTY.
+
+## Containers
+
+A set of pre-configurated containers to home server usage.
+These containers will use the `sda` device mounted on `/media/sda` to create an `.appdata` folder and mount volumes,
+You can change that path in the scripts (`APPDATA_PATH`).
+
+#### Filebrowser
+
+- name: `filebrowser`
+- official website: https://filebrowser.org
+- maestro add command: `maestro create filebrowser "podman start filebrowser --attach"`
+
+A cool file manager tool.
+
+#### Jellyfin
+
+- name: `jellyfin`
+- official website: https://jellyfin.org
+- maestro add command: `maestro create jellyfin "podman start jellyfin --attach"`
+
+Local media streaming service.
