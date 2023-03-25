@@ -58,7 +58,7 @@ Local media streaming service.
 
 - name: `deluge`
 - official website: https://deluge-torrent.org
-- status: `untested`
+- status: `tested`
 - webui port: `8112`
 
 BitTorrent client.
