@@ -30,6 +30,8 @@ These tools are added automatically by the `setup_server.sh` script:
 - [maestro](https://github.com/Raisess/maestro): Manage background processes.
   - You can use to start your services in background and track logs without opening directly in your main TTY.
 
+- [box](https://github.com/Raisess/box): Manage your containers.
+
 ## Containers
 
 A set of pre-configurated containers to home server usage.

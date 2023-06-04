@@ -1,0 +1,19 @@
+{
+  "name": "deluge",
+  "image": "lscr.io/linuxserver/deluge:latest",
+  "envs": [
+    ["PUID", "$(id -u)"],
+    ["PGID", "$(id -g)"],
+    ["TZ", "Etc/UTC"],
+    ["DELUGE_LOGLEVEL", "error"]
+  ],
+  "volumes": [
+    ["/media/sda/.appdata/deluge/config", "/config"],
+    ["/media/sda/downloads", "/downloads"]
+  ],
+  "ports": [
+    [8112, 8112, "tcp"],
+    [6881, 6881, "tcp"],
+    [6881, 6881, "udp"]
+  ]
+}

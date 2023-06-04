@@ -20,6 +20,7 @@ echo ">>> Setuping tools..."
 cd $TOOLS_PATH
 # CLI's
 git clone https://github.com/Raisess/maestro && cd maestro && NO_SUDO=1 ./install.py && cd ..
+git clone https://github.com/Raisess/box && cd box && NO_SUDO=1 ./install.py && cd ..
 echo ">>> Done!"
 
 rm -rf $DOWNLOAD_PATH

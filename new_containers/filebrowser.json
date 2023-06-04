@@ -1,0 +1,16 @@
+{
+  "name": "filebrowser",
+  "image": "docker.io/filebrowser/filebrowser:latest",
+  "envs": [
+    ["PUID", "$(id -u)"],
+    ["PGID", "$(id -g)"]
+  ],
+  "volumes": [
+    ["/media/sda/.appdata/filebrowser/settings.json", "/config/settings.json"],
+    ["/media/sda/.appdata/filebrowser/filebrowser.db", "/database/filebrowser.db"],
+    ["/media/sda", "/srv"]
+  ],
+  "ports": [
+    [1234, 80, "tcp"]
+  ]
+}
