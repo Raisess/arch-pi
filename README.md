@@ -35,8 +35,10 @@ These tools are added automatically by the `setup_server.sh` script:
 ## Containers
 
 A set of pre-configurated containers to home server usage.
-These containers will use the `sda` device mounted on `/media/sda` to create an `.appdata` folder and mount volumes,
-You can change that path in the scripts (`APPDATA_PATH`).
+These containers will use the `sda` device mounted on `/media/sda` to create an `.appdata` folder and mount volumes.
+These containers can be creating using the [box](https://github.com/Raisess/box) cli.
+
+- For `old_containers`: You can change that path in the scripts (`APPDATA_PATH`).
 
 #### Filebrowser
 
