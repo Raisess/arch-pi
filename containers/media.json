@@ -44,8 +44,8 @@
         ["PGID", "$(id -g)"]
       ],
       "volumes": [
-        ["/media/sda/.appdata/filebrowser/settings.json", "/config/settings.json"],
-        ["/media/sda/.appdata/filebrowser/filebrowser.db", "/database/filebrowser.db"],
+        ["/media/sda/.appdata/filebrowser/config", "/config"],
+        ["/media/sda/.appdata/filebrowser/database", "/database"],
         ["/media/sda", "/srv"]
       ],
       "ports": [

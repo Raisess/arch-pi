@@ -6,7 +6,7 @@
       "name": "gogs",
       "image": "docker.io/gogs/gogs:latest",
       "volumes": [
-        ["media/sda/.appdata/data", "data"]
+        ["/media/sda/.appdata/gogs/data", "/data"]
       ],
       "ports": [
         [10880, 3000, "tcp"],
