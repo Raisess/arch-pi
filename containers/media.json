@@ -1,56 +1,52 @@
-{
-  "name": "media",
-  "network": "media",
-  "containers": [
-    {
-      "name": "jellyfin",
-      "image": "docker.io/jellyfin/jellyfin:latest",
-      "volumes": [
-        ["/media/sda/.appdata/jellyfin/cache", "/cache"],
-        ["/media/sda/.appdata/jellyfin/config", "/config"]
-      ],
-      "ports": [
-        [8096, 8096, "tcp"]
-      ],
-      "options": [
-        ["user", "$(id -u):$(id -g)"],
-        ["mount", "type=bind,source=/media/sda/media/video,destination=/media,ro=true,relabel=private"]
-      ]
-    },
-    {
-      "name": "deluge",
-      "image": "lscr.io/linuxserver/deluge:latest",
-      "envs": [
-        ["PUID", "$(id -u)"],
-        ["PGID", "$(id -g)"],
-        ["TZ", "Etc/UTC"],
-        ["DELUGE_LOGLEVEL", "error"]
-      ],
-      "volumes": [
-        ["/media/sda/.appdata/deluge/config", "/config"],
-        ["/media/sda/downloads", "/downloads"]
-      ],
-      "ports": [
-        [8112, 8112, "tcp"],
-        [6881, 6881, "tcp"],
-        [6881, 6881, "udp"]
-      ]
-    },
-    {
-      "name": "filebrowser",
-      "image": "docker.io/filebrowser/filebrowser:latest",
-      "envs": [
-        ["PUID", "$(id -u)"],
-        ["PGID", "$(id -g)"]
-      ],
-      "volumes": [
-        ["/media/sda/.appdata/filebrowser/config", "/config"],
-        ["/media/sda/.appdata/filebrowser/database", "/database"],
-        ["/media/sda", "/srv"]
-      ],
-      "ports": [
-        [1234, 80, "tcp"]
-      ]
-    }
-  ]
-}
+[
+  {
+    "name": "jellyfin",
+    "image": "docker.io/jellyfin/jellyfin:latest",
+    "volumes": [
+      ["/media/sda/.appdata/jellyfin/cache", "/cache"],
+      ["/media/sda/.appdata/jellyfin/config", "/config"]
+    ],
+    "ports": [
+      [8096, 8096, "tcp"]
+    ],
+    "options": [
+      ["user", "$(id -u):$(id -g)"],
+      ["mount", "type=bind,source=/media/sda/media/video,destination=/media,ro=true,relabel=private"]
+    ]
+  },
+  {
+    "name": "deluge",
+    "image": "lscr.io/linuxserver/deluge:latest",
+    "envs": [
+      ["PUID", "$(id -u)"],
+      ["PGID", "$(id -g)"],
+      ["TZ", "Etc/UTC"],
+      ["DELUGE_LOGLEVEL", "error"]
+    ],
+    "volumes": [
+      ["/media/sda/.appdata/deluge/config", "/config"],
+      ["/media/sda/downloads", "/downloads"]
+    ],
+    "ports": [
+      [8112, 8112, "tcp"],
+      [6881, 6881, "tcp"],
+      [6881, 6881, "udp"]
+    ]
+  },
+  {
+    "name": "filebrowser",
+    "image": "docker.io/filebrowser/filebrowser:latest",
+    "envs": [
+      ["PUID", "$(id -u)"],
+      ["PGID", "$(id -g)"]
+    ],
+    "volumes": [
+      ["/media/sda/.appdata/filebrowser/config", "/config"],
+      ["/media/sda/.appdata/filebrowser/database", "/database"],
+      ["/media/sda", "/srv"]
+    ],
+    "ports": [
+      [1234, 80, "tcp"]
+    ]
+  }
+]
