@@ -48,5 +48,21 @@
     "ports": [
       [1234, 80, "tcp"]
     ]
+  },
+  {
+    "name": "kavita",
+    "image": "docker.io/kizaing/kavita:latest",
+    "envs": [
+      ["PUID", "$(id -u)"],
+      ["PGID", "$(id -g)"],
+      ["TZ", "Etc/UTC"]
+    ],
+    "volumes": [
+      ["/media/sda/.appdata/kavita/config", "/kavita/config"],
+      ["/media/sda/media/books", "/books"]
+    ],
+    "ports": [
+      [5000, 5000, "tcp"]
+    ]
   }
 ]

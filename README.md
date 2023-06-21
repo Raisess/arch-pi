@@ -40,6 +40,8 @@ These containers can be creating using the [box](https://github.com/Raisess/box)
 
 - For `old_containers`: You can change that path in the scripts (`APPDATA_PATH`).
 
+### Media
+
 #### Filebrowser
 
 - name: `filebrowser`
@@ -66,3 +68,23 @@ Local media streaming service.
 - webui port: `8112`
 
 BitTorrent client.
+
+#### Kavita
+
+- name: `kavita`
+- official website: https://www.kavitareader.com
+- status: `tested`
+- webui port: `5000`
+
+A self-hosted digital library.
+
+### Dev
+
+#### Gogs
+
+- name: `gogs`
+- official website: https://gogs.io
+- status: `tested`
+- webui port: `10880`
+
+An Github self-hosted alternative.
